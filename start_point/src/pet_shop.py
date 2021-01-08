@@ -1,2 +1,10 @@
 # WRITE YOUR FUNCTIONS HERE
-abc
+
+def get_pet_shop_name(list):
+    name = list["name"]
+    return name
+
+
+
+
+
