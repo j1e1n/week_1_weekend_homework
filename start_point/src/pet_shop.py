@@ -66,7 +66,11 @@ def get_customer_cash(list):
     return cash
 
 
-
+def remove_customer_cash(customer, amount):
+    customer["cash"] = customer["cash"] - amount
+    return customer["cash"]
+    
+    
 
 
     
