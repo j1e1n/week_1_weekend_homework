@@ -40,3 +40,19 @@ def get_pets_by_breed(list, search_breed):
     return count
 
 
+def find_pet_by_name(list, search_name):
+    for pet in list["pets"]:
+        if search_name == pet["name"]:
+            return pet
+        
+
+
+
+def remove_pet_by_name(list, search_name):
+    pet = find_pet_by_name(list, search_name)
+    for pet in list["pets"]:
+        if pet["name"] == search_name:
+            list["pets"].pop(list["pets"].index(pet))
+
+
+    
