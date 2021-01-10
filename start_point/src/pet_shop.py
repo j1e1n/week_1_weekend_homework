@@ -55,4 +55,11 @@ def remove_pet_by_name(list, search_name):
             list["pets"].pop(list["pets"].index(pet))
 
 
+
+
+def add_pet_to_stock(list, new_pet):
+    list["pets"].append(new_pet)
+    
+
+
     
