@@ -44,7 +44,6 @@ def find_pet_by_name(list, search_name):
     for pet in list["pets"]:
         if search_name == pet["name"]:
             return pet
-        
 
 
 
@@ -53,6 +52,7 @@ def remove_pet_by_name(list, search_name):
     for pet in list["pets"]:
         if pet["name"] == search_name:
             list["pets"].pop(list["pets"].index(pet))
+        
 
 
 
@@ -90,4 +90,22 @@ def customer_can_afford_pet(customer, new_pet):
         can_buy = False
 
     return can_buy
+
+
+# integration tests
+
+def sell_pet_to_customer(list, pet, customer): 
+        if customer_can_afford_pet(customer, pet):
+            add_pet_to_customer(customer, pet)
+            increase_pets_sold(list, 1)
+            remove_customer_cash(customer, pet["price"])
+            add_or_remove_cash(list, pet["price"])
+    
+
+                
+           
+
+
+
+
     
